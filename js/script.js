@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded',function(){
+window.addEventListener('DOMContentLoaded',()=>{
     let products = document.querySelectorAll('.product'),
     buttons = document.querySelectorAll('button'),
     openBtn = document.querySelector('.open');
@@ -39,8 +39,8 @@ window.addEventListener('DOMContentLoaded',function(){
     openBtn.addEventListener('click', openCart);
     close.addEventListener('click', closeCart);
 
-    buttons.forEach(function(item,i){
-        item.addEventListener('click', function(){
+    buttons.forEach((item,i) =>{
+        item.addEventListener('click', ()=>{
             let item = products[i].cloneNode(true),
                 btn = item.querySelector('button');
 
